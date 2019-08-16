@@ -1,6 +1,3 @@
-To start you will need to download the docker image. To do so go to 
-https://drive.google.com/file/d/1XGfDZW4WnMfmh5F5NcHRPstJMmMlK_nQ/view?usp=sharing and download to your current working directory.
-
 
 ```
 #setting up audio config for Retropie
@@ -10,15 +7,21 @@ brew install pulseaudio
 pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
 ```
 
+Script will pull docker image and start a vnc server in the container pointed at http://localhost:6081/
+Run the following...
+```
 ./setup.sh
+```
 
 navigate to http://localhost:6081
 
-once you see glxgears working
+Once you see glxgears working, run the following in a new terminal process.
 
-in a new terminal process
-run ./emulationStation.sh
+```
+./emulationStation.sh
+```
 
-if sound is not working change in the sound settings in emulation station
+If sound is not working change in the sound settings in emulation station.
+
 audio card = DEFAULT
 audio device = MASTER
