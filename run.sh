@@ -7,7 +7,7 @@ fi
 
 
 container=opengl-example
-image=retropie
+image=18091/retropie:latest
 port=6081
 extra_run_args=""
 quiet=""
